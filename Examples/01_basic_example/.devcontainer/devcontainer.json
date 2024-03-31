@@ -1,0 +1,4 @@
+{
+    "name": "Python Development Environment",
+    "image": "python:3.10"
+}
