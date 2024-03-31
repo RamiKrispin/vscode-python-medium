@@ -1,0 +1,43 @@
+{
+    "name": "Python Development Environment",
+    // "image": "python:3.10",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "ENV_NAME": "my_python_env",
+            "PYTHON_VER": "${localEnv:PYTHON_VER:3.10}"
+        }
+    },
+    "customizations": {
+        "settings": {
+            "python.defaultInterpreterPath": "/opt/my_python_env/bin/python3",
+            "python.selectInterpreter": "/opt/my_python_env/bin/python3"
+        },
+        "vscode": {
+            "extensions": [
+                // Documentation Extensions
+                "purocean.drawio-preview",
+                "redhat.vscode-yaml",
+                "yzhang.markdown-all-in-one",
+                // Docker Supporting Extensions
+                "ms-azuretools.vscode-docker",
+                "ms-vscode-remote.remote-containers",
+                // Python Extensions
+                "ms-python.python",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    },
+    // Optional, mount local volume:
+    // "mounts": [
+    //     "source=${localEnv:DATA_FOLDER},target=/home/csv,type=bind,consistency=cache"
+    // ],
+    "remoteEnv": {
+        "MY_VAR": "${localEnv:MY_VAR:test_var}"
+    },
+    "runArgs": [
+        "--env-file",
+        ".devcontainer/devcontainer.env"
+    ],
+    "postCreateCommand": "python3 tests/test1.py"
+}
