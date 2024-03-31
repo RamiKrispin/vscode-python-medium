@@ -1,0 +1,10 @@
+{
+    "name": "Python Development Environment",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".",
+        "args": {
+            "PYTHON_ENV": "my_python_dev"
+        }
+    }
+}

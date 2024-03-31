@@ -1,0 +1,22 @@
+{
+    "name": "Python Development Environment",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".",
+        "args": {
+            "PYTHON_ENV": "my_python_dev"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/opt/my_python_dev/bin/python3",
+                "python.selectInterpreter": "/opt/my_python_dev/bin/python3"
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    }
+}
