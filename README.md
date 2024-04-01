@@ -5,6 +5,10 @@ This repo provides the code examples for this medium article. This includes the 
 - [Build settings](https://github.com/RamiKrispin/vscode-python-medium/tree/main/02_build_example) - extending the first example by using the `build` argument to build the image from a Dockerfile
 - [Customization settings](https://github.com/RamiKrispin/vscode-python-medium/tree/main/03_final_example) - adding to the previous example the `customizations` argument to set the default Python interpreter and define the extension settings
 
+<figure>
+<img src="images/vscode final.gif" width="100%" align="center"/></a>
+</figure>
+
 ## Resources
 
 Additional resources for setting a Python development environment with VScode and the Dev Containers extension:
